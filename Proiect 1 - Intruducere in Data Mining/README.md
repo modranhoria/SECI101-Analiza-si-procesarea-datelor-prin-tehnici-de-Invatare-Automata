@@ -119,7 +119,7 @@ $$
 \sigma^2 = \frac{1}{n}\sum_{i=1}^{n}(x_i - \bar{x})^2
 $$
 
-În mod implicit, `np.var()` folosește formula pentru populație și împarte la `n`.
+În mod implicit, `np.var()` folosește formula și împarte la `n`.
 
 #### Exemplu pas cu pas: calculul manual al varianței
 
@@ -167,7 +167,7 @@ $$
 
 Prin urmare, **varianța este aproximativ `1432.2`**. Rezultatul este aproximativ deoarece media a fost rotunjită la `77.4` în pașii intermediari. Dacă păstrăm mai multe zecimale pe parcurs, rezultatul final rotunjit la o zecimală rămâne `1432.2`.
 
-> **Atenție:** pentru varianța unui eșantion se împarte la `n - 1 = 6`, nu la `n = 7`. În exemplul de mai sus calculăm explicit varianța populației.
+> **Atenție:** pentru varianța unui eșantion se împarte la `n - 1 = 6`, nu la `n = 7`. În exemplul de mai sus calculăm explicit varianța.
 
 Codul următor calculează varianța și varianța eșantionului pentru lista `speed` folosită în exercițiul principal:
 
@@ -182,7 +182,7 @@ print("Varianța:", speed_variance)
 
 ```python
 speed_std = np.std(speed)
-print("Abaterea standard a populației:", speed_std)
+print("Abaterea standard:", speed_std)
 ```
 
 ### 6. Percentile
@@ -204,7 +204,7 @@ Tabelul de mai jos reunește principalele statistici. Folosește-l pentru a comp
 
 ```python
 summary = pd.DataFrame({
-    "Statistică": ["Media", "Mediana", "Moda", "Varianța populației", "Abaterea standard a populației", "Percentila 25", "Percentila 50", "Percentila 75"],
+    "Statistică": ["Media", "Mediana", "Moda", "Varianța", "Abaterea standard", "Percentila 25", "Percentila 50", "Percentila 75"],
     "Valoare": [mean_value, median_value, mode_value, speed_variance, speed_std, p25, p50, p75],
 })
 display(summary)
@@ -275,8 +275,6 @@ Fișierul `Dataset.csv` conține un set de date ilustrativ, de dimensiuni mici, 
 - `Vârstă`: variabilă numerică, cu o valoare lipsă;
 - `Salariu`: variabilă numerică, cu o valoare lipsă;
 - `Achiziționat`: rezultat categorial (`Da` sau `Nu`).
-
-Setul de date este intenționat mic, astfel încât primii pași de explorare să fie ușor de urmărit. Nu este destinat formulării unor concluzii despre populații reale sau comportamentul consumatorilor.
 
 ### 8. Deschiderea fișierului
 
