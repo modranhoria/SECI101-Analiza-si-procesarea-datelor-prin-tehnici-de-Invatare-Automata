@@ -119,7 +119,7 @@ $$
 \sigma^2 = \frac{1}{n}\sum_{i=1}^{n}(x_i - \bar{x})^2
 $$
 
-În mod implicit, `np.var()` folosește formula pentru populație și împarte la `n` (`ddof=0`). Dacă valorile sunt tratate ca un eșantion folosit pentru estimarea unei populații mai mari, o alternativă uzuală este varianța eșantionului, care împarte la `n - 1` (`ddof=1`). Alegerea corectă depinde de ceea ce reprezintă datele.
+În mod implicit, `np.var()` folosește formula pentru populație și împarte la `n`.
 
 #### Exemplu pas cu pas: calculul manual al varianței
 
@@ -172,21 +172,17 @@ Prin urmare, **varianța este aproximativ `1432.2`**. Rezultatul este aproximati
 Codul următor calculează varianța și varianța eșantionului pentru lista `speed` folosită în exercițiul principal:
 
 ```python
-population_variance = np.var(speed)
-sample_variance = np.var(speed, ddof=1)
-print("Varianța populației (ddof=0):", population_variance)
-print("Varianța eșantionului (ddof=1):", sample_variance)
+speed_variance = np.var(speed)
+print("Varianța:", speed_variance)
 ```
 
 ### 5. Abaterea standard
 
-**Abaterea standard** este rădăcina pătrată a varianței. Descrie dispersia folosind aceeași unitate de măsură ca observațiile inițiale, ceea ce o face adesea mai ușor de interpretat decât varianța. Ca și în cazul varianței, NumPy folosește implicit varianta pentru populație; setează `ddof=1` pentru estimarea bazată pe eșantion.
+**Abaterea standard** este rădăcina pătrată a varianței. Descrie dispersia folosind aceeași unitate de măsură ca observațiile inițiale, ceea ce o face adesea mai ușor de interpretat decât varianța.
 
 ```python
-population_std = np.std(speed)
-sample_std = np.std(speed, ddof=1)
-print("Abaterea standard a populației:", population_std)
-print("Abaterea standard a eșantionului:", sample_std)
+speed_std = np.std(speed)
+print("Abaterea standard a populației:", speed_std)
 ```
 
 ### 6. Percentile
@@ -209,7 +205,7 @@ Tabelul de mai jos reunește principalele statistici. Folosește-l pentru a comp
 ```python
 summary = pd.DataFrame({
     "Statistică": ["Media", "Mediana", "Moda", "Varianța populației", "Abaterea standard a populației", "Percentila 25", "Percentila 50", "Percentila 75"],
-    "Valoare": [mean_value, median_value, mode_value, population_variance, population_std, p25, p50, p75],
+    "Valoare": [mean_value, median_value, mode_value, speed_variance, speed_std, p25, p50, p75],
 })
 display(summary)
 ```
