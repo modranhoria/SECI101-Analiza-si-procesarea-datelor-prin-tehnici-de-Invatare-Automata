@@ -66,9 +66,9 @@ print("Observații:", speed)
 
 Formula:
 
-\[
+$$
 \bar{x} = \frac{1}{n}\sum_{i=1}^{n} x_i
-\]
+$$
 
 Execută celula și notează rezultatul. Apoi gândește-te cum s-ar modifica media dacă una dintre observații ar fi mult mai mare decât celelalte.
 
@@ -115,9 +115,9 @@ print("Frecvența mode-ului:", mode_count)
 
 **Varianța** măsoară cât de răspândite sunt valorile în jurul mediei. Pentru a calcula varianța unui șir, scade media din fiecare observație, ridică diferențele la pătrat și calculează media lor:
 
-\[
+$$
 \sigma^2 = \frac{1}{n}\sum_{i=1}^{n}(x_i - \bar{x})^2
-\]
+$$
 
 În mod implicit, `np.var()` folosește formula pentru populație și împarte la `n` (`ddof=0`). Dacă valorile sunt tratate ca un eșantion folosit pentru estimarea unei populații mai mari, o alternativă uzuală este varianța eșantionului, care împarte la `n - 1` (`ddof=1`). Alegerea corectă depinde de ceea ce reprezintă datele.
 
@@ -127,9 +127,9 @@ Considerăm următoarele șapte valori: **32, 111, 138, 28, 59, 77, 97**. În ac
 
 **Pasul 1 — Calculăm media aritmetică.** Adunăm toate valorile și împărțim suma la numărul lor:
 
-\[
+$$
 \bar{x} = \frac{32+111+138+28+59+77+97}{7} = \frac{542}{7} \approx 77.4
-\]
+$$
 
 **Pasul 2 — Scădem media din fiecare valoare.** Aceste diferențe arată cât de departe este fiecare observație de media calculată:
 
@@ -157,13 +157,13 @@ Considerăm următoarele șapte valori: **32, 111, 138, 28, 59, 77, 97**. În ac
 
 **Pasul 4 — Calculăm media pătratelor diferențelor.** Adunăm pătratele și împărțim la `7`:
 
-\[
+$$
 \sigma^2 = \frac{2061.16+1128.96+3672.36+2440.36+338.56+0.16+384.16}{7}
-\]
+$$
 
-\[
+$$
 \sigma^2 = \frac{10025.72}{7} \approx 1432.2
-\]
+$$
 
 Prin urmare, **varianța este aproximativ `1432.2`**. Rezultatul este aproximativ deoarece media a fost rotunjită la `77.4` în pașii intermediari. Dacă păstrăm mai multe zecimale pe parcurs, rezultatul final rotunjit la o zecimală rămâne `1432.2`.
 
