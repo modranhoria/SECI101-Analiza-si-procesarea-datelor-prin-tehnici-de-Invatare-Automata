@@ -302,7 +302,7 @@ Preprocesarea nu este o secvență identică pentru toate proiectele. Ordinea ș
 ## Fișiere
 
 - `README.md` — explicațiile și codul laboratorului
-- `Pre_procesarea_datelor.ipynb` — notebook-ul original pentru execuție interactivă.
+- `Pre_procesarea_datelor.ipynb` — notebook-ul original.
 - `Dataset.csv` — setul de date folosit în exercițiu.
 
 Asigură-te că `Dataset.csv` este disponibil în directorul de lucru al notebook-ului sau în panoul **Files / Fișiere** din Google Colab. Codul din README este prezentat în blocuri separate pentru a putea fi copiat în celule Jupyter în ordinea indicată.
