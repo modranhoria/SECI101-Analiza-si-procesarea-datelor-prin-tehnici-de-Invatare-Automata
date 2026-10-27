@@ -1,6 +1,6 @@
 # Proiect 2 — Procesarea datelor
 
-## Pre-procesarea datelor în Python
+## Pre-procesarea datelor
 
 ## Prezentare generală
 
