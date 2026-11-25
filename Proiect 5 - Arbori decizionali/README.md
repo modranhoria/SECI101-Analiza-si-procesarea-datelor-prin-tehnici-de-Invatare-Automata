@@ -442,7 +442,7 @@ plt.title("Arbore decizional – primele niveluri")
 plt.show()
 ```
 
-`feature_names` furnizează numele caracteristicilor după preprocesare. `filled=True` colorează nodurile în funcție de clasa predominantă, iar `max_depth=3` limitează reprezentarea la primele niveluri pentru a păstra diagrama lizibilă. Această limitare afectează numai desenul, nu și modelul deja antrenat.
+`feature_names` furnizează numele caracteristicilor după preprocesare. `filled=True` colorează nodurile în funcție de clasa predominantă, iar `max_depth=3` limitează reprezentarea la primele niveluri pentru a păstra diagrama lizibilă. Această limitare afectează numai figura, nu și modelul deja antrenat.
 
 ### 6.4. Regulile de clasificare
 
